@@ -40,15 +40,15 @@ backupFileName="backup-[$currentTS].tar.gz"
 origAbsPath=`pwd`
 
 # [TASK 6]
-cd # <-
-destDirAbsPath=`cd $destinationDirectory`
+cd $destinationDirectory # <-
+destDirAbsPath=`pwd`
 
 # [TASK 7]
-cd # <-
-cd # <-
+cd $origAbsPath # <-
+cd $destDirAbsPath # <-
 
 # [TASK 8]
-yesterdayTS=
+yesterdayTS=$(($currentTS - 24 * 60 * 60))
 
 declare -a toBackup
 
