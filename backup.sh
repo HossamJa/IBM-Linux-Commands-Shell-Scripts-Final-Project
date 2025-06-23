@@ -16,18 +16,18 @@ then
 fi
 
 # [TASK 1]
-targetDirectory='$1'
-destinationDirectory='$'
+targetDirectory=$1
+destinationDirectory=$2
 
 # [TASK 2]
-echo ""
-echo ""
+echo "This is the Target target Directory: $targetDirectory"
+echo "This is the destination Directory: $destinationDirectory"
 
 # [TASK 3]
-currentTS=``
+currentTS=`$(date +%S)`
 
 # [TASK 4]
-backupFileName=""
+backupFileName="backup-[$currentTS].tar.gz"
 
 # We're going to:
   # 1: Go into the target directory
@@ -37,11 +37,11 @@ backupFileName=""
 # To make things easier, we will define some useful variables...
 
 # [TASK 5]
-origAbsPath=``
+origAbsPath=`pwd`
 
 # [TASK 6]
 cd # <-
-destDirAbsPath=``
+destDirAbsPath=`cd $destinationDirectory`
 
 # [TASK 7]
 cd # <-
